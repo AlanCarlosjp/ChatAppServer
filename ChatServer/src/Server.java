@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Server {
     public static void main(String[] args) {
 
-
         final ServerSocket serverSocket;
         final Socket clientSocket;
         final BufferedReader in;
@@ -61,6 +60,7 @@ public class Server {
                     }
                 }
             });
+            sender.start();
             receiver.start();
         }catch (IOException e){
             e.printStackTrace();
